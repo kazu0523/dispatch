@@ -1,14 +1,12 @@
-name: Repository dispatch receive
-
+name: Repository Dispatch Workflow
 on:
   repository_dispatch:
-    types: [on-demand-test]
-
+    types: [echo_message]
 jobs:
-  receive-repository-dispatch:
+  echo_message:
     runs-on: ubuntu-latest
-    steps:
-      - name: Receive
-        run: |
-          env=${{ github.event.client_payload.env }}
-          echo "ENV = $env"
+    steps:      
+      - name: Echo Message
+　　　　　　　　　　　　　　　　env:
+          MESSAGE: ${{ github.event.client_payload.message }}
+        run: echo ${{ env.MESSAGE }}
