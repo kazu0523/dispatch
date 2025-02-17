@@ -26,5 +26,5 @@ jobs:
         # commitメッセージにtask3を含む場合だけjobを実行する。それ以外のときは何もしない
         # 変数を${{}}で囲ってしまうと常にTrueが返されてしまうので注意
         if: "contains(github.event.client_payload.message, 'task3')"
-        run: echo "${{github.event.client_payload.ref}}"
+        run: echo "${{github.event.client_payload.commitid}}"
         
