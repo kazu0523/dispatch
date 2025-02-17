@@ -7,6 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - name: Echo Message
-　　　　　　　　　　　　　　　　env:
-          MESSAGE: ${{ github.event.client_payload.message }}
-        run: echo ${{ env.MESSAGE }}
+        run: echo ${{ github.event.client_payload.message }}
