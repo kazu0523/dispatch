@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - name: Echo Message
-        run: echo "test project"
+        run: echo ${{ env.MESSAGE }}
